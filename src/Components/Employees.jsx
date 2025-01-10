@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AddEmployee from "./AddEmployee";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-
+import Image from "../assets/background.webp";
 export default function Employee() {
   const [employees, setEmployees] = useState([]);
   const [showAdd, setShowAdd] = useState(false);
@@ -40,7 +40,12 @@ export default function Employee() {
   return (
     <div
       className="container p-4 text-white"
-      style={{ marginTop: "150px", background: "#a83240", borderRadius: "8px" }}
+      style={{
+        marginTop: "150px",
+        background: "#a83240",
+        borderRadius: "8px",
+        backgroundImage: { Image },
+      }}
     >
       <h1 className="text-center mb-4" style={{ fontSize: "2.1rem" }}>
         Employee Management App
